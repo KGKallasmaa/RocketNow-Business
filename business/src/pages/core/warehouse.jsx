@@ -71,7 +71,7 @@ export default class Warehouse extends React.Component {
         axios.post(process.env.REACT_APP_SERVER_URL, {
             query: print(WAREHOUSE_QUERY),
             variables: {
-                jwt_token: sessionStorage.getItem("jwtToken_business")
+                jwt_token: localStorage.getItem("jwtToken_business")
             }
         }).then(res => {
                 this.setState({

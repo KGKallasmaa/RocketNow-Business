@@ -109,7 +109,7 @@ class PartialOrder extends React.Component {
         axios.post(process.env.REACT_APP_SERVER_URL, {
             query: print(UPDATE_PARTIAL_ORDER_STATUS),
             variables: {
-                jwt_token: sessionStorage.getItem("jwtToken_business"),
+                jwt_token: localStorage.getItem("jwtToken_business"),
                 partialOrderId: this.props.partialOrder.partialOrder._id,
                 newStatus: newStatus
             }
@@ -220,7 +220,7 @@ export default class Order extends React.Component {
         axios.post(process.env.REACT_APP_SERVER_URL, {
             query: print(NR_OF_IN_PROGRESS_ORDERS_QUERY),
             variables: {
-                jwt_token: sessionStorage.getItem("jwtToken_business")
+                jwt_token: localStorage.getItem("jwtToken_business")
             }
         }).then(res => {
                 this.setState({
@@ -245,7 +245,7 @@ export default class Order extends React.Component {
         axios.post(process.env.REACT_APP_SERVER_URL, {
             query: print(NR_OF_ORDERDS_PROCESSING_NOT_STARTED_QUERY),
             variables: {
-                jwt_token: sessionStorage.getItem("jwtToken_business")
+                jwt_token: localStorage.getItem("jwtToken_business")
             }
         }).then(res => {
                 this.setState({
@@ -270,7 +270,7 @@ export default class Order extends React.Component {
         axios.post(process.env.REACT_APP_SERVER_URL, {
             query: print(NR_OF_NOT_SHIPPED_ORDERS_QUERY),
             variables: {
-                jwt_token: sessionStorage.getItem("jwtToken_business")
+                jwt_token: localStorage.getItem("jwtToken_business")
             }
         }).then(res => {
                 this.setState({
@@ -295,7 +295,7 @@ export default class Order extends React.Component {
         axios.post(process.env.REACT_APP_SERVER_URL, {
             query: print(UN_COMPLETED_ORDERS_VALUE_QUERY),
             variables: {
-                jwt_token: sessionStorage.getItem("jwtToken_business")
+                jwt_token: localStorage.getItem("jwtToken_business")
             }
         }).then(res => {
                 this.setState({
@@ -320,7 +320,7 @@ export default class Order extends React.Component {
         axios.post(process.env.REACT_APP_SERVER_URL, {
             query: print(PARTIALORDER_QUERY),
             variables: {
-                jwt_token: sessionStorage.getItem("jwtToken_business")
+                jwt_token: localStorage.getItem("jwtToken_business")
             }
         }).then(res => {
                 this.setState({

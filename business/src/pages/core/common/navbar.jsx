@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function BusinessNavbar() {
-    const altMessage = sessionStorage.getItem("businessDisplayName") + " logo";
+    const altMessage = localStorage.getItem("businessDisplayName") + " logo";
     return (
         <nav className="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
             <div className="container-fluid">
