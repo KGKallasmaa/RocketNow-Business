@@ -388,8 +388,8 @@ class NormalSignupForm extends React.Component {
                             <div className="invalid-feedback">{this.state.formErrors.repassword}</div>
                         </Form.Item>
                         <Form.Item>
-                            <p>By signing up I agree to <a href="/tos">Terms of Service</a> and <a
-                                href="/privacy">Privacy
+                            <p>By signing up I agree to <a href="http://rocketnow.eu/tos">Terms of Service</a> and <a
+                                href="http://rocketnow.eu/privacy">Privacy
                                 Policy</a>
                             </p>
                         </Form.Item>
@@ -408,7 +408,7 @@ class NormalSignupForm extends React.Component {
                     <div id="login-box-footer"
                          style={{padding: "10px 20px", paddingBottom: "23px", paddingTop: "18px"}}>
                         <p style={{marginBottom: "0px"}}> Already have an business account? <a id="register-link"
-                                                                                      href="/business/login">Login!</a>
+                                                                                      href="/login">Login!</a>
                         </p>
                     </div>
                     <br/>
