@@ -97,6 +97,7 @@ import Home from './pages/public/home';
 import Login from './pages/public/login';
 import Signup from './pages/public/signup';
 import PageNotFound from './pages/pageNotFound';
+import Affiliate from "./pages/public/affiliate";
 
 //todo: affiliate page
 
@@ -110,6 +111,12 @@ it('Homepage renders correctly', () => {
 it('Login page renders correctly', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Login/>, div);
+    ReactDOM.unmountComponentAtNode(div);
+});
+
+it('Affiliate page renders correctly', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Affiliate/>, div);
     ReactDOM.unmountComponentAtNode(div);
 });
 

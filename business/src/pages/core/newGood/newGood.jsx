@@ -11,6 +11,8 @@ import PhysicalGoodForm from "../newGood/newPhysicalGood";
 import {currency_symbol_converter} from "../../../components/currency_and_symbol";
 import {NEW_PHYSICAL_GOOD_MUTATION} from "../../../graphql/core/newProduct/addNewPhysicalProduct_MUTATION";
 import {Helmet} from "react-helmet";
+import AcceptsCookies from "../../../components/legal/cookieConsent";
+import CustomerChat from "../../../components/customerChat/customerChat";
 
 const {TabPane} = Tabs;
 const antIcon = <Icon type="loading" style={{fontSize: 24}} spin/>;
@@ -295,6 +297,8 @@ export default class Order extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <AcceptsCookies/>
+                    <CustomerChat/>
                     <div className="row">
                         <div className="col-md-4 col-xl-4 mb-4">
                             <div className="card shadow border-left-danger py-2">
@@ -307,7 +311,6 @@ export default class Order extends React.Component {
                                             <div className="text-dark font-weight-bold h5 mb-0">
                                                 <span>{rocketnow_fee}{currency_transformed} </span></div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

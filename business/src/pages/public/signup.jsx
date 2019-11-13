@@ -7,6 +7,8 @@ import {Helmet} from "react-helmet";
 import axios from 'axios';
 import '../../assets/css/login.min.css';
 import {businessSignUp_MUTATION} from "../../graphql/public/businessSignup_MUTATION";
+import AcceptsCookies from "../../components/legal/cookieConsent";
+import CustomerChat from "../../components/customerChat/customerChat";
 
 
 
@@ -261,6 +263,8 @@ class NormalSignupForm extends React.Component {
                           content="Signing up to RocketNow unlocks a whole new world"/>
                     <meta name="description" content="Signing up to RocketNow unlocks a whole new world"/>
                 </Helmet>
+                <AcceptsCookies/>
+                <CustomerChat/>
                 <div className="login-box-header">
                     <h4 style={{
                         color: "rgb(139,139,139)",
@@ -384,8 +388,8 @@ class NormalSignupForm extends React.Component {
                             <div className="invalid-feedback">{this.state.formErrors.repassword}</div>
                         </Form.Item>
                         <Form.Item>
-                            <p>By signing up I agree to <a href="/tos">Terms of Service</a> and <a
-                                href="/privacy">Privacy
+                            <p>By signing up I agree to <a href="http://rocketnow.eu/tos">Terms of Service</a> and <a
+                                href="http://rocketnow.eu/privacy">Privacy
                                 Policy</a>
                             </p>
                         </Form.Item>
@@ -404,7 +408,7 @@ class NormalSignupForm extends React.Component {
                     <div id="login-box-footer"
                          style={{padding: "10px 20px", paddingBottom: "23px", paddingTop: "18px"}}>
                         <p style={{marginBottom: "0px"}}> Already have an business account? <a id="register-link"
-                                                                                      href="/business/login">Login!</a>
+                                                                                      href="/login">Login!</a>
                         </p>
                     </div>
                     <br/>

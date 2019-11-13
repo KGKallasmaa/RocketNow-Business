@@ -7,6 +7,7 @@ import {Helmet} from "react-helmet";
 import axios from 'axios';
 import '../../assets/css/login.min.css';
 import {businessLogin_QUERY} from "../../graphql/public/businessLogin_QUERY";
+import AcceptsCookies from "../../components/legal/cookieConsent";
 
 
 const antIcon = <Icon type="loading" theme="twoTone" twoToneColor="#fffffff" style={{fontSize: 33}} spin/>;
@@ -138,6 +139,7 @@ class NormalLoginForm extends React.Component {
                           content="Loging in to RocketNow unlocks a whole new world"/>
                     <meta name="description" content="Signing up to RocketNow unlocks a whole new world"/>
                 </Helmet>
+                <AcceptsCookies/>
                 <div className="login-box-header">
                     <h4 style={{
                         color: "rgb(139,139,139)",
@@ -180,8 +182,8 @@ class NormalLoginForm extends React.Component {
                             <div className="invalid-feedback">{this.state.formErrors.password}</div>
                         </Form.Item>
                         <Form.Item>
-                            <p>By logging in I agree to <a href="/tos">Terms of Service</a> and <a
-                                href="/privacy">Privacy
+                            <p>By logging in I agree to <a href="http://rocketnow.eu/tos">Terms of Service</a> and <a
+                                href="http://rocketnow.eu/privacy">Privacy
                                 Policy</a>
                             </p>
                         </Form.Item>
@@ -200,7 +202,7 @@ class NormalLoginForm extends React.Component {
                     <div id="login-box-footer"
                          style={{padding: "10px 20px", paddingBottom: "23px", paddingTop: "18px"}}>
                         <p style={{marginBottom: "0px"}}> Don't have a business account? <a id="register-link"
-                                                                                            href="/business/signup">Sign
+                                                                                            href="/signup">Sign
                             up!</a>
                         </p>
                     </div>

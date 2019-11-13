@@ -12,6 +12,7 @@ import Settings from "./pages/core/settings";
 
 import Signup from "./pages/public/signup";
 import Login from "./pages/public/login";
+import Affiliate from "./pages/public/affiliate";
 
 
 import PageNotFound from "./pages/pageNotFound.jsx";
@@ -53,6 +54,7 @@ export default function App() {
                 <PrivateBusinessRoute exact path="/orders" component={Orders}/>
                 <PrivateBusinessRoute exact path="/warehouse" component={Warehouse}/>
                 <Route exact path="/" component={Home}/>
+                <Route exact path="/affiliate" component={Affiliate}/>
                 <Route path="*" component={PageNotFound}/>
             </Switch>
         </Router>

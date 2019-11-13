@@ -9,6 +9,8 @@ import {formatTimeStamp} from "../../components/relativeTimestamp";
 import BusinessFooter from "./common/footer";
 import {WAREHOUSE_QUERY} from "../../graphql/core/warehouse/warehouse_QUERY";
 import {Helmet} from "react-helmet";
+import AcceptsCookies from "../../components/legal/cookieConsent";
+import CustomerChat from "../../components/customerChat/customerChat";
 
 let GLOBAL_enumerator = 0;
 
@@ -114,6 +116,8 @@ export default class Warehouse extends React.Component {
                 <link rel="stylesheet"
                       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"/>
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
+                <AcceptsCookies/>
+                <CustomerChat/>
                 <div id="businessWrapper">
                     <Menu/>
                     <div className="d-flex flex-column" id="content-wrapper">

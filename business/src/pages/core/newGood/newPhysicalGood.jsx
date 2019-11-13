@@ -1,6 +1,6 @@
 import React from 'react';
 import {Form, Select, Tooltip} from 'antd';
-import {DropzoneArea} from 'material-ui-dropzone';
+import {DropzoneArea} from "material-ui-dropzone";
 
 const {Option} = Select;
 
