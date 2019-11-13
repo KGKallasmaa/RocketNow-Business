@@ -399,7 +399,7 @@ export default class Home extends React.PureComponent {
                             <div className="row">
                                 <div className="col-md-4 col-xl-12"><a
                                     className="btn btn-outline-primary btn-block text-capitalize text-white border rounded-0"
-                                    role="button" style={pricingButton} href="/affiliate">Learn
+                                    role="button" style={pricingButton} href="/affiliate" aria-label={"Learn more about the RocketNow affiliate network"}>Learn
                                     more</a></div>
                             </div>
                         </div>
