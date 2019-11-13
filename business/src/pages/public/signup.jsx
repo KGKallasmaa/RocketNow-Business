@@ -7,6 +7,8 @@ import {Helmet} from "react-helmet";
 import axios from 'axios';
 import '../../assets/css/login.min.css';
 import {businessSignUp_MUTATION} from "../../graphql/public/businessSignup_MUTATION";
+import AcceptsCookies from "../../components/legal/cookieConsent";
+import CustomerChat from "../../components/customerChat/customerChat";
 
 
 
@@ -261,6 +263,8 @@ class NormalSignupForm extends React.Component {
                           content="Signing up to RocketNow unlocks a whole new world"/>
                     <meta name="description" content="Signing up to RocketNow unlocks a whole new world"/>
                 </Helmet>
+                <AcceptsCookies/>
+                <CustomerChat/>
                 <div className="login-box-header">
                     <h4 style={{
                         color: "rgb(139,139,139)",

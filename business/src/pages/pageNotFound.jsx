@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import "../assets/css/pageNotFound.min.css";
+import AcceptsCookies from "../components/legal/cookieConsent";
+import CustomerChat from "../components/customerChat/customerChat";
 
 
 export default class PageNotFound extends React.PureComponent {
@@ -22,6 +24,8 @@ export default class PageNotFound extends React.PureComponent {
                         <a href="/">Go To Homepage</a>
                     </div>
                 </div>
+                <AcceptsCookies/>
+                <CustomerChat/>
             </React.Fragment>
         );
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {isBusinessUserLoggedIn} from "../../components/authentication";
 import BusinessHome from "../core/home";
+import  AcceptsCookies from "../../components/legal/cookieConsent";
 import {Helmet} from "react-helmet";
 
 import Footer from "./common/footer";
@@ -20,6 +21,7 @@ import entartainment from "./assets/img/entartainment.jpeg";
 import fashion from "./assets/img/fashion.jpeg";
 import healthAndBeauty from "./assets/img/health_and_beauty.jpeg";
 import subscriptions from "./assets/img/subscribtions.jpeg";
+import CustomerChat from "../../components/customerChat/customerChat";
 
 const maxWith = {width: " 100%"};
 
@@ -82,6 +84,8 @@ export default class Home extends React.PureComponent {
                     <div className="bg-circle-3 bg-circle"/>
                     <div className="bg-circle-4 bg-circle"/>
                 </header>
+                <AcceptsCookies/>
+                <CustomerChat/>
                 <section>
                     <div className="container">
                         <div className="row align-items-center">
