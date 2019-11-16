@@ -1,15 +1,33 @@
 import React from 'react';
 import {Form, message, Spin, Icon} from 'antd';
-import {print} from 'graphql';
 import logo from '../../assets/img/logo.svg';
-import { Redirect } from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import {Helmet} from "react-helmet";
-import axios from 'axios';
 import '../../assets/css/login.min.css';
 import {businessSignUp_MUTATION} from "../../graphql/public/businessSignup_MUTATION";
-import AcceptsCookies from "../../components/legal/cookieConsent";
-import CustomerChat from "../../components/customerChat/customerChat";
+import AcceptsCookies from "../../components/cookieConsent";
+import CustomerChat from "../../components/customerChat";
 
+import LazyLoad from 'react-lazyload';
+
+import 'antd/es/form/style/css';
+import 'antd/es/icon/style/css';
+import 'antd/es/spin/style/css';
+import 'antd/es/message/style/css';
+
+import {fetchData} from "../../components/fetcher";
+
+
+
+const headingStyle = {
+    color: "rgb(139,139,139)",
+    marginBottom: "0px",
+    fontWeight: "400",
+    fontSize: "27px"
+};
+const logoHeight = {
+    height: "150px"
+};
 
 
 const antIcon = <Icon type="loading" theme="twoTone" twoToneColor="#fffffff" style={{fontSize: 33}} spin/>;
@@ -197,49 +215,39 @@ class NormalSignupForm extends React.Component {
         });
     }
 
-    businessSignupSubmit = (event) => {
+    businessSignupSubmit = async (event) => {
         event.preventDefault();
         this.setState({signupBusinessUser: true});
 
         const {legalname, logoURL, displayname, description, IBAN, email, password} = this.state;
 
-        axios.post(process.env.REACT_APP_SERVER_URL, {
-            query: print(businessSignUp_MUTATION),
-            variables: {
-                email: email,
-                password: password,
-                signupMethod: "Regular",
-                legalname: legalname,
-                logoURL: logoURL,
-                displayname: displayname,
-                description: description,
-                IBAN: IBAN
-            }
-        }).then(resData => {
+        const variables = {
+            email: email,
+            password: password,
+            signupMethod: "Regular",
+            legalname: legalname,
+            logoURL: logoURL,
+            displayname: displayname,
+            description: description,
+            IBAN: IBAN
+        };
 
-                message.success('You successfully signed up!');
-                this.setState({
-                    redirect: true,
-                    signupBusinessUser: false
-                });
-            }
-        ).catch(error => {
-            if (error.response) {
-                if (error.response.data) {
-                    if (error.response.data.errors[0]) {
-                        const errorMessage = error.response.data.errors[0].message;
-                        if (errorMessage !== null) {
-                            message.error(errorMessage);
-                        }
-                    }
-                }
-            }
+        let fetchBusinessUserSignUp = fetchData(variables, businessSignUp_MUTATION);
+        let businessUserSignUp = await fetchBusinessUserSignUp;
+        if (businessUserSignUp !== null) {
+            message.success('You successfully signed up!');
+            this.setState({
+                redirect: true,
+                signupBusinessUser: false
+            });
+            return true;
+        } else {
             this.setState({
                 redirect: false,
                 signupBusinessUser: false
             });
-
-        });
+            return false;
+        }
     };
 
 
@@ -252,29 +260,27 @@ class NormalSignupForm extends React.Component {
 
     render() {
         const signup_user_status = this.state.signupBusinessUser;
-        const cannonial_url = process.env.REACT_APP_PUBLIC_URL + "/signup";
         return (
             <div className="d-flex flex-column justify-content-center" id="login-box">
                 <Helmet>
                     <title>Sign up</title>
                     <meta property="og:title" content="Sign up"/>
-                    <link rel="canonial" href={cannonial_url}/>
+                    <link rel="canonial" href={process.env.REACT_APP_PUBLIC_URL + "/signup"}/>
                     <meta property="og:description"
                           content="Signing up to RocketNow unlocks a whole new world"/>
                     <meta name="description" content="Signing up to RocketNow unlocks a whole new world"/>
+                    <link rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
                 </Helmet>
                 <AcceptsCookies/>
                 <CustomerChat/>
                 <div className="login-box-header">
-                    <h4 style={{
-                        color: "rgb(139,139,139)",
-                        marginBottom: "0px",
-                        fontWeight: "400",
-                        fontSize: "27px"
-                    }}>
-                        <img src={logo}
-                             style={{height: "150px"}}
-                             alt="RocketNow logo"/>
+                    <h4 style={headingStyle}>
+                        <LazyLoad>
+                            <img src={logo}
+                                 style={logoHeight}
+                                 alt="RocketNow logo"/>
+                        </LazyLoad>
                     </h4>
                 </div>
                 <div className="email-login" style={{backgroundColor: "#ffffff"}}>
@@ -337,15 +343,15 @@ class NormalSignupForm extends React.Component {
 
                         <Form.Item>
                             <label htmlFor="name">Short description</label>
-                                 <input
-                                     className={`form-control ${this.errorClass(this.state.formErrors.description)}`}
-                                     id="description"
-                                     name="description"
-                                     type="text"
-                                     placeholder="Tell your customers about your venture"
-                                     value={this.state.description}
-                                     onChange={this.handleChange}
-                                 />
+                            <input
+                                className={`form-control ${this.errorClass(this.state.formErrors.description)}`}
+                                id="description"
+                                name="description"
+                                type="text"
+                                placeholder="Tell your customers about your venture"
+                                value={this.state.description}
+                                onChange={this.handleChange}
+                            />
                             <div className="invalid-feedback">{this.state.formErrors.description}</div>
                         </Form.Item>
                         <Form.Item>
@@ -407,8 +413,8 @@ class NormalSignupForm extends React.Component {
                     {this.renderRedirect()}
                     <div id="login-box-footer"
                          style={{padding: "10px 20px", paddingBottom: "23px", paddingTop: "18px"}}>
-                        <p style={{marginBottom: "0px"}}> Already have an business account? <a id="register-link"
-                                                                                      href="/login">Login!</a>
+                        <p> Already have an business account? <a id="register-link"
+                                                                                               href="/login">Login!</a>
                         </p>
                     </div>
                     <br/>

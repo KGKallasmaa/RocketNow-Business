@@ -1,6 +1,6 @@
 import React from "react";
-import AcceptsCookies from "../../components/legal/cookieConsent";
-import CustomerChat from "../../components/customerChat/customerChat";
+import AcceptsCookies from "../../components/cookieConsent";
+import CustomerChat from "../../components/customerChat";
 
 
 
