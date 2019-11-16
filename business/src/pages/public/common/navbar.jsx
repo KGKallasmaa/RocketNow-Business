@@ -1,14 +1,15 @@
 import React from 'react';
 
 
-export default React.memo(() => {
+export const Navbar = React.memo((props) => {
         return (
             <nav className="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
                 <div className="container">
-                    <a className="navbar-brand" href="/">
+                    <a className="navbar-brand" href="/" aria-label={"Homepage"}>
                         RocketNow
                     </a>
-                    <button data-toggle="collapse" className="navbar-toggler" data-target="#navbarResponsive">
+                    <button data-toggle="collapse" className="navbar-toggler" data-target="#navbarResponsive"
+                            aria-label={"View navigation options"}>
                         <span className="navbar-toggler-icon"/>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">

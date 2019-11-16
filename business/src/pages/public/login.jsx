@@ -137,7 +137,7 @@ class NormalLoginForm extends React.Component {
                     <meta property="og:description"
                           content="Loging in to RocketNow unlocks a whole new world"/>
                     <meta name="description" content="Signing up to RocketNow unlocks a whole new world"/>
-                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                    <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
                     <link rel="stylesheet"
                           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
                 </Helmet>

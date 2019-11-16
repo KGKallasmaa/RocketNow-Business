@@ -5,7 +5,7 @@ import AcceptsCookies from "../../components/cookieConsent";
 import {Helmet} from "react-helmet";
 
 import Footer from "./common/footer";
-import Navbar from "./common/navbar";
+import {Navbar} from "./common/navbar";
 
 import "./assets/css/bootstrap.min.css";
 import "./assets/css/home.min.css";
@@ -68,6 +68,8 @@ export default class Home extends React.PureComponent {
                     <meta name="twitter:image" content={ogLogo}/>
                     <meta property="og:image" content={ogLogo}/>
                     <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                    <link rel="preconnect" href="https://use.fontawesome.com"/>
+                    <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
                     <link rel="stylesheet"
                           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
                     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>

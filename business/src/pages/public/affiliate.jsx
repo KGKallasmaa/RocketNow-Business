@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from "./common/footer";
-import Navbar from "./common/navbar";
+import {Navbar} from "./common/navbar";
 import AcceptsCookies from "../../components/cookieConsent";
 import CustomerChat from "../../components/customerChat";
 
