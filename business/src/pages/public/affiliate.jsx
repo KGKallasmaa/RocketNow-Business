@@ -1,8 +1,8 @@
 import React from 'react';
 import Footer from "./common/footer";
 import Navbar from "./common/navbar";
-import AcceptsCookies from "../../components/legal/cookieConsent";
-import CustomerChat from "../../components/customerChat/customerChat";
+import AcceptsCookies from "../../components/cookieConsent";
+import CustomerChat from "../../components/customerChat";
 
 
 export default React.memo(() => {

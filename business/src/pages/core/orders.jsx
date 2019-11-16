@@ -15,8 +15,8 @@ import {NR_OF_IN_PROGRESS_ORDERS_QUERY} from "../../graphql/core/order/nrOfInPro
 import {Helmet} from "react-helmet";
 import {UPDATE_PARTIAL_ORDER_STATUS} from "../../graphql/core/order/updatePartialOrderStatus_MUTATION";
 import {getEmoji} from "../../components/emoji";
-import AcceptsCookies from "../../components/legal/cookieConsent";
-import CustomerChat from "../../components/customerChat/customerChat";
+import AcceptsCookies from "../../components/cookieConsent";
+import CustomerChat from "../../components/customerChat";
 
 const {Option} = Select;
 let GLOBAL_enumerator = 0;
@@ -371,13 +371,16 @@ export default class Order extends React.Component {
                     <meta property="og:description"
                           content="Manage your orders from the RocketNow store"/>
                     <meta name="description" content="Manage your orders from the RocketNow store"/>
+
+                    <link rel="preconnect" href="https://use.fontawesome.com"/>
+                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                    <link rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
                 </Helmet>
 
-                <link rel="stylesheet"
-                      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"/>
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
-                <AcceptsCookies/>
-                <CustomerChat/>
+
+
                 <div id="businessWrapper">
                     <Menu/>
                     <div className="d-flex flex-column" id="content-wrapper">
@@ -541,6 +544,8 @@ export default class Order extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        <AcceptsCookies/>
+                        <CustomerChat/>
                         <BusinessFooter/>
                     </div>
                 </div>

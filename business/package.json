@@ -14,13 +14,14 @@
     "material-ui-dropzone": "^2.4.5",
     "mdbreact": "^4.8.5-patch.1",
     "react": "^16.11.0",
+    "react-cookie-consent": "^2.5.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
+    "react-lazyload": "^2.6.5",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "3.2.0",
-    "webpack": "4.41.0",
-    "react-cookie-consent": "^2.5.0"
+    "webpack": "4.41.0"
   },
   "scripts": {
     "start": "PORT=3002 react-scripts start",

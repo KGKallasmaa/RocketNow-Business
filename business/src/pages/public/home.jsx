@@ -1,7 +1,7 @@
 import React from 'react';
 import {isBusinessUserLoggedIn} from "../../components/authentication";
 import BusinessHome from "../core/home";
-import  AcceptsCookies from "../../components/legal/cookieConsent";
+import AcceptsCookies from "../../components/cookieConsent";
 import {Helmet} from "react-helmet";
 
 import Footer from "./common/footer";
@@ -21,7 +21,9 @@ import entartainment from "./assets/img/entartainment.webp";
 import fashion from "./assets/img/fashion.webp";
 import healthAndBeauty from "./assets/img/health_and_beauty.webp";
 import subscriptions from "./assets/img/subscriptions.webp";
-import CustomerChat from "../../components/customerChat/customerChat";
+import CustomerChat from "../../components/customerChat";
+
+import LazyLoad from 'react-lazyload';
 
 const maxWith = {width: " 100%"};
 
@@ -65,6 +67,24 @@ export default class Home extends React.PureComponent {
                           content="It's easy to sell online with RocketNow. Put your products in front of RocketNow customers and increase your visibility."/>
                     <meta name="twitter:image" content={ogLogo}/>
                     <meta property="og:image" content={ogLogo}/>
+                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                    <link rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
+                    <link rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css"/>
+                    <link rel="stylesheet"
+                          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"/>
+                    <link rel="preconnect"
+                          href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"/>
+                    <link rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
+                    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i"
+                          rel="stylesheet"/>
+                    <link rel="stylesheet"
+                          href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"/>
+                    <link rel="stylesheet"
+                          href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"/>
                 </Helmet>
 
                 <Navbar/>
@@ -84,15 +104,16 @@ export default class Home extends React.PureComponent {
                     <div className="bg-circle-3 bg-circle"/>
                     <div className="bg-circle-4 bg-circle"/>
                 </header>
-                <AcceptsCookies/>
-                <CustomerChat/>
+
                 <section>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-6 order-lg-2">
                                 <div className="p-5">
-                                    <img className="rounded-circle img-fluid"
-                                         src={awesomeProducts} alt={"Selling products on RocketNow"} loading="lazy"/>
+                                    <LazyLoad>
+                                        <img className="rounded-circle img-fluid"
+                                             src={awesomeProducts} alt={"Selling products on RocketNow"}/>
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div className="col-lg-6 order-lg-1">
@@ -120,21 +141,23 @@ export default class Home extends React.PureComponent {
                                         Fashion
                                     </h3>
                                     <a href="/signup" aria-label={"Join RocketNow business platform"}>
-                                        <img src={fashion} style={maxWith} loading="lazy"
-                                             alt="rocketnow-business-fashion"/>
+                                        <LazyLoad>
+                                            <img src={fashion} style={maxWith} alt="rocketnow-business-fashion"/>
+                                        </LazyLoad>
                                     </a>
                                 </div>
                             </div>
-
                             <div className="col-sm-6 col-md-5 col-lg-4 item">
                                 <div className="box">
                                     <h3 className="text-left name"
                                         style={{height: "45px", fontSize: "30px", width: "190px", marginLeft: "-15px"}}>
                                         <strong>Subscriptions</strong></h3>
                                     <a href="/signup" aria-label={"Join RocketNow business platform"}>
-                                        <img src={subscriptions}
-                                             style={maxWith} loading="lazy"
-                                             alt="rocketnow-business-subscriptions"/>
+                                        <LazyLoad>
+                                            <img src={subscriptions}
+                                                 style={maxWith}
+                                                 alt="rocketnow-business-subscriptions"/>
+                                        </LazyLoad>
                                     </a>
                                 </div>
                             </div>
@@ -144,9 +167,11 @@ export default class Home extends React.PureComponent {
                                         style={{height: "45px", fontSize: "30px", width: "210px", marginLeft: "-15px"}}>
                                         <strong>Entertainment</strong></h3>
                                     <a href="/signup" aria-label={"Join RocketNow business platform"}>
-                                        <img src={entartainment}
-                                             style={maxWith} loading="lazy"
-                                             alt="rocketnow-business-entertainment"/>
+                                        <LazyLoad>
+                                            <img src={entartainment}
+                                                 style={maxWith}
+                                                 alt="rocketnow-business-entertainment"/>
+                                        </LazyLoad>
                                     </a>
                                 </div>
                             </div>
@@ -156,8 +181,10 @@ export default class Home extends React.PureComponent {
                                         style={{height: "45px", fontSize: "30px", width: "300px", marginLeft: "-15px"}}>
                                         <strong>Health &amp; Beauty</strong></h3>
                                     <a href="/signup" aria-label={"Join RocketNow business platform"}>
-                                        <img src={healthAndBeauty} style={maxWith} loading="lazy"
-                                             alt="rocketnow-business-health-and-beauty"/>
+                                        <LazyLoad>
+                                            <img src={healthAndBeauty} style={maxWith}
+                                                 alt="rocketnow-business-health-and-beauty"/>
+                                        </LazyLoad>
                                     </a>
                                 </div>
                             </div>
@@ -167,9 +194,9 @@ export default class Home extends React.PureComponent {
                                         style={{height: "45px", fontSize: "30px", marginLeft: "-15px"}}><strong>Digital
                                         Goods</strong></h3>
                                     <a href="/signup" aria-label={"Join RocketNow business platform"}>
-                                        <img src={digital}
-                                             style={maxWith} loading="lazy"
-                                             alt="rocketnow-business-digital"/>
+                                        <LazyLoad>
+                                            <img src={digital} style={maxWith} alt="rocketnow-business-digital"/>
+                                        </LazyLoad>
                                     </a>
                                 </div>
                             </div>
@@ -179,9 +206,11 @@ export default class Home extends React.PureComponent {
                                         style={{height: "45px", fontSize: "35px", marginLeft: "-15px"}}>
                                         <strong>Electronics</strong></h3>
                                     <a href="/signup" aria-label={"Join RocketNow business platform"}>
-                                        <img src={electronics}
-                                             style={maxWith} loading="lazy"
-                                             alt="rocketnow-business-electronics"/>
+                                        <LazyLoad>
+                                            <img src={electronics}
+                                                 style={maxWith}
+                                                 alt="rocketnow-business-electronics"/>
+                                        </LazyLoad>
                                     </a>
                                 </div>
                             </div>
@@ -193,9 +222,11 @@ export default class Home extends React.PureComponent {
                         <div className="row align-items-center">
                             <div className="col-lg-6 order-lg-1">
                                 <div className="p-5">
-                                    <img className="rounded-circle img-fluid"
-                                         src={chooseAPlan} loading="lazy"
-                                         alt="rocketnow-business-path"/>
+                                    <LazyLoad>
+                                        <img className="rounded-circle img-fluid"
+                                             src={chooseAPlan}
+                                             alt="rocketnow-business-path"/>
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div className="col-lg-6 order-lg-2">
@@ -240,7 +271,11 @@ export default class Home extends React.PureComponent {
                                         <ul className="list-unstyled mb-4">
                                             <li>1 collaborator</li>
                                             <li>Up to 10 products</li>
-                                            <li/><li/><li/><li/><li/>
+                                            <li/>
+                                            <li/>
+                                            <li/>
+                                            <li/>
+                                            <li/>
                                         </ul>
                                         <a className="btn btn-outline-primary btn-block text-capitalize text-white border rounded mb-3"
                                            role="button"
@@ -310,9 +345,11 @@ export default class Home extends React.PureComponent {
                         <div className="row align-items-center">
                             <div className="col-lg-6 order-lg-2">
                                 <div className="p-5">
-                                    <img className="rounded-circle img-fluid"
-                                         src={businessSupport} loading="lazy"
-                                         alt="rocketnow-business-support"/>
+                                    <LazyLoad>
+                                        <img className="rounded-circle img-fluid"
+                                             src={businessSupport}
+                                             alt="rocketnow-business-support"/>
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div className="col-lg-6 order-lg-1">
@@ -398,13 +435,18 @@ export default class Home extends React.PureComponent {
                             <div className="row">
                                 <div className="col-md-4 col-xl-12"><a
                                     className="btn btn-outline-primary btn-block text-capitalize text-white border rounded-0"
-                                    role="button" style={pricingButton} href="/affiliate" aria-label={"Learn more about the RocketNow affiliate network"}>Learn
+                                    role="button" style={pricingButton} href="/affiliate"
+                                    aria-label={"Learn more about the RocketNow affiliate network"}>Learn
                                     more</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <Footer/>
+                <AcceptsCookies/>
+                <CustomerChat/>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"/>
+                <script  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" />
             </React.Fragment>
         );
     }

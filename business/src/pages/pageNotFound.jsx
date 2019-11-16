@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import "../assets/css/pageNotFound.min.css";
-import AcceptsCookies from "../components/legal/cookieConsent";
-import CustomerChat from "../components/customerChat/customerChat";
+import AcceptsCookies from "../components/cookieConsent";
+import CustomerChat from "../components/customerChat";
 
 
 export default class PageNotFound extends React.PureComponent {
@@ -10,8 +10,9 @@ export default class PageNotFound extends React.PureComponent {
         return (
             <React.Fragment>
                 <Helmet>
-                    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet"/>
                     <title>404: Page not found</title>
+                    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet"/>
+                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 </Helmet>
                 <div id="notfound">
                     <div className="notfound">

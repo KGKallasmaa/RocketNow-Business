@@ -3,16 +3,22 @@ import Menu from "../common/menu";
 import "../../../assets/css/business/admin.min.css";
 import axios from "axios";
 import {print} from "graphql";
-import {message, Spin} from "antd";
+import {message, Spin, Tabs, Icon} from "antd";
+
+import 'antd/es/message/style/css';
+import 'antd/es/spin/style/css';
+import 'antd/es/tabs/style/css';
+import 'antd/es/icon/style/css';
+
 import BusinessNavbar from "../common/navbar";
 import BusinessFooter from "../common/footer";
-import {Tabs, Icon} from 'antd';
+
 import PhysicalGoodForm from "../newGood/newPhysicalGood";
 import {currency_symbol_converter} from "../../../components/currency_and_symbol";
 import {NEW_PHYSICAL_GOOD_MUTATION} from "../../../graphql/core/newProduct/addNewPhysicalProduct_MUTATION";
 import {Helmet} from "react-helmet";
-import AcceptsCookies from "../../../components/legal/cookieConsent";
-import CustomerChat from "../../../components/customerChat/customerChat";
+import AcceptsCookies from "../../../components/cookieConsent";
+import CustomerChat from "../../../components/customerChat";
 
 const {TabPane} = Tabs;
 const antIcon = <Icon type="loading" style={{fontSize: 24}} spin/>;
@@ -291,14 +297,12 @@ export default class Order extends React.Component {
                                             <div className="text-dark font-weight-bold h5 mb-0">
                                                 <span>{revenue}{currency_transformed} </span></div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <AcceptsCookies/>
-                    <CustomerChat/>
+
                     <div className="row">
                         <div className="col-md-4 col-xl-4 mb-4">
                             <div className="card shadow border-left-danger py-2">
@@ -418,20 +422,22 @@ export default class Order extends React.Component {
     };
 
     render() {
-        const cannonial_url = process.env.REACT_APP_PUBLIC_URL + "/core/new/product";
         return (
             <div id="page-top">
                 <Helmet>
                     <title>New Product</title>
                     <meta property="og:title" content="New Product"/>
-                    <link rel="canonial" href={cannonial_url}/>
+                    <link rel="canonial" href={process.env.REACT_APP_PUBLIC_URL + "/new/product"}/>
+                    <link rel="preconnect" href="https://use.fontawesome.com"/>
+                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
                     <meta property="og:description"
                           content="Add new product to your RocketNow store"/>
                     <meta name="description" content="Add new product to your RocketNow store"/>
+                    <link rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
                 </Helmet>
-                <link rel="stylesheet"
-                      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"/>
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
+
                 <div id="businessWrapper">
                     <Menu/>
                     <div className="d-flex flex-column" id="content-wrapper">
@@ -474,6 +480,8 @@ export default class Order extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        <AcceptsCookies/>
+                        <CustomerChat/>
                         <BusinessFooter/>
                     </div>
                 </div>

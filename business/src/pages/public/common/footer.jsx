@@ -40,7 +40,9 @@ export default React.memo(() => {
                             </div>
                             <div className="col-sm-6 col-md-3 item">
                                 <h3 style={color}>RocketNow</h3>
-                                <p> A new e-commerce platform.</p>
+                                <ul>
+                                <li><a aria-label={"Read the terms of service"} href="http://rocketnow.eu">A new e-commerce platform</a></li>
+                                </ul>
                             </div>
                             <div className="col item social">
                                 <a title={"View RocketNow on Facebook"} href="#"><i
