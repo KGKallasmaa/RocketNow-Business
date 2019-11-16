@@ -372,7 +372,6 @@ export default class Order extends React.Component {
                           content="Manage your orders from the RocketNow store"/>
                     <meta name="description" content="Manage your orders from the RocketNow store"/>
                     <link rel="preconnect" href="https://use.fontawesome.com"/>
-                    <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
                     <link rel="stylesheet"
                           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
                     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
