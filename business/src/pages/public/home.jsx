@@ -10,17 +10,17 @@ import Navbar from "./common/navbar";
 import "./assets/css/bootstrap.min.css";
 import "./assets/css/home.min.css";
 
-import awesomeProducts from "./assets/img/awesome products.jpg";
-import chooseAPlan from "./assets/img/chooseAPlan.jpg";
-import businessSupport from "./assets/img/business-support.jpg";
-import ogLogo from "./assets/img/og_Logo.png";
+import awesomeProducts from "./assets/img/awesome products.webp";
+import chooseAPlan from "./assets/img/choseAPlan.webp";
+import businessSupport from "./assets/img/business-support.webp";
+import ogLogo from "./assets/img/og_Logo.webp";
 
-import digital from "./assets/img/digital_goods.jpeg";
-import electronics from "./assets/img/electronics.jpeg";
-import entartainment from "./assets/img/entartainment.jpeg";
-import fashion from "./assets/img/fashion.jpeg";
-import healthAndBeauty from "./assets/img/health_and_beauty.jpeg";
-import subscriptions from "./assets/img/subscribtions.jpeg";
+import digital from "./assets/img/digital_goods.webp";
+import electronics from "./assets/img/electronics.webp";
+import entartainment from "./assets/img/entartainment.webp";
+import fashion from "./assets/img/fashion.webp";
+import healthAndBeauty from "./assets/img/health_and_beauty.webp";
+import subscriptions from "./assets/img/subscriptions.webp";
 import CustomerChat from "../../components/customerChat/customerChat";
 
 const maxWith = {width: " 100%"};
@@ -217,7 +217,7 @@ export default class Home extends React.PureComponent {
                                 Simple fee structure
                             </h2>
                             <p className="text-center" style={{color: "rgb(255,255,255)", fontSize: "35px"}}>
-                                0.3€ + 10.4%
+                                0.25€ + 11.4%
                             </p>
                         </div>
                         <div className="buttons"/>
@@ -321,8 +321,7 @@ export default class Home extends React.PureComponent {
                                     <p>We're helping you to get the most out of your RocketNows store.<br/>We're there
                                         for you If you need help with setting up your account or you want sales-boosting
                                         tips.<br/>We're also taking care of most communication with your retail
-                                        clients so that you can focus on what's truly important -&gt; making your
-                                        products better.</p>
+                                        clients so that you can focus on what's truly important.</p>
                                 </div>
                             </div>
                         </div>

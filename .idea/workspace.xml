@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2c6f33e6-1ed9-408d-9bb3-812f66960a3b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/business/src/pages/public/assets/img/awesome products.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/src/pages/public/assets/img/business-support.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/src/pages/public/assets/img/choseAPlan.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/src/pages/public/assets/img/fashion.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/src/pages/public/assets/img/health_and_beauty.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/src/pages/public/assets/img/og_Logo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/src/pages/public/assets/img/subscriptions.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/business/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/awesome products.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/business-support.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/chooseAPlan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/digital_goods.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/electronics.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/entartainment.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/fashion.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/health_and_beauty.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/og_Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/assets/img/subscribtions.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/pages/public/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/pages/public/home.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/business/src/pages/public/assets/img" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/business/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
