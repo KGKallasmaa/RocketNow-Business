@@ -10,7 +10,6 @@ import BusinessFooter from "./common/footer";
 import {WAREHOUSE_QUERY} from "../../graphql/core/warehouse/warehouse_QUERY";
 import {Helmet} from "react-helmet";
 import AcceptsCookies from "../../components/cookieConsent";
-import CustomerChat from "../../components/customerChat";
 import LazyLoad from 'react-lazyload';
 
 let GLOBAL_enumerator = 0;
@@ -286,7 +285,6 @@ export default class Warehouse extends React.Component {
                             </div>
                         </div>
                         <AcceptsCookies/>
-                        <CustomerChat/>
                         <BusinessFooter/>
                     </div>
                 </div>

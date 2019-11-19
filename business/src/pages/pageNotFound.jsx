@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import "../assets/css/pageNotFound.min.css";
 import AcceptsCookies from "../components/cookieConsent";
-import CustomerChat from "../components/customerChat";
 
 
 export default class PageNotFound extends React.PureComponent {
@@ -26,7 +25,7 @@ export default class PageNotFound extends React.PureComponent {
                     </div>
                 </div>
                 <AcceptsCookies/>
-                <CustomerChat/>
+
             </React.Fragment>
         );
     }

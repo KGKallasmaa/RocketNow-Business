@@ -21,7 +21,6 @@ import entartainment from "./assets/img/entartainment.webp";
 import fashion from "./assets/img/fashion.webp";
 import healthAndBeauty from "./assets/img/health_and_beauty.webp";
 import subscriptions from "./assets/img/subscriptions.webp";
-import CustomerChat from "../../components/customerChat";
 
 import LazyLoad from 'react-lazyload';
 
@@ -67,26 +66,7 @@ export default class Home extends React.PureComponent {
                           content="It's easy to sell online with RocketNow. Put your products in front of RocketNow customers and increase your visibility."/>
                     <meta name="twitter:image" content={ogLogo}/>
                     <meta property="og:image" content={ogLogo}/>
-                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                    <link rel="stylesheet"
-                          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
-                    <link rel="stylesheet"
-                          href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css"/>
-                    <link rel="stylesheet"
-                          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"/>
-                    <link rel="preconnect"
-                          href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"/>
-                    <link rel="stylesheet"
-                          href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
-                    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i"
-                          rel="stylesheet"/>
-                    <link rel="stylesheet"
-                          href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"/>
-                    <link rel="stylesheet"
-                          href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"/>
                 </Helmet>
-
                 <Navbar/>
                 <header className="masthead text-center text-white">
                     <div className="masthead-content">
@@ -241,19 +221,6 @@ export default class Home extends React.PureComponent {
                         </div>
                     </div>
                 </section>
-                <div className="highlight-blue" style={{backgroundColor: "#1e96ff"}}>
-                    <div className="container">
-                        <div className="intro">
-                            <h2 className="text-center" style={{fontSize: "48px"}}>
-                                Simple fee structure
-                            </h2>
-                            <p className="text-center" style={{color: "rgb(255,255,255)", fontSize: "35px"}}>
-                                0.25€ + 11.4%
-                            </p>
-                        </div>
-                        <div className="buttons"/>
-                    </div>
-                </div>
                 <div className="features-boxed">
                     <h2 className="text-center">Plans</h2>
                     <div className="container">
@@ -371,7 +338,7 @@ export default class Home extends React.PureComponent {
                         </div>
                         <div className="row justify-content-center features">
                             <div className="col-sm-6 col-md-5 col-lg-4 item">
-                                <div className="box"><i className="fas fa-pencil-alt icon" style={blueColor}/>
+                                <div className="box"><i className="far fa-edit icon" style={blueColor}/>
                                     <h3 className="name">1. Sign up for Free</h3>
                                     <p className="description">
                                         Sign up &nbsp;online for free. &nbsp;All you need is an email address, IBAN and
@@ -407,7 +374,7 @@ export default class Home extends React.PureComponent {
                                 </div>
                             </div>
                             <div className="col-sm-6 col-md-5 col-lg-4 item">
-                                <div className="box"><i className="fa fa-bank icon" style={blueColor}/>
+                                <div className="box"><i className="fa fa-university icon" style={blueColor}/>
                                     <h3 className="name">5.&nbsp;<strong>&nbsp;Get paid&nbsp;</strong></h3>
                                     <p className="description">
                                         Choose between getting paid on a weekly or monthly bases. You can also choose to
@@ -444,7 +411,6 @@ export default class Home extends React.PureComponent {
                 </div>
                 <Footer/>
                 <AcceptsCookies/>
-                <CustomerChat/>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"/>
                 <script  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" />
             </React.Fragment>

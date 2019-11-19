@@ -6,7 +6,6 @@ import {Helmet} from "react-helmet";
 import '../../assets/css/login.min.css';
 import {businessSignUp_MUTATION} from "../../graphql/public/businessSignup_MUTATION";
 import AcceptsCookies from "../../components/cookieConsent";
-import CustomerChat from "../../components/customerChat";
 
 import LazyLoad from 'react-lazyload';
 
@@ -273,7 +272,6 @@ class NormalSignupForm extends React.Component {
                           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
                 </Helmet>
                 <AcceptsCookies/>
-                <CustomerChat/>
                 <div className="login-box-header">
                     <h4 style={headingStyle}>
                         <LazyLoad>

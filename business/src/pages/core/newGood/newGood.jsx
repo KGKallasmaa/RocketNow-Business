@@ -18,7 +18,6 @@ import {currency_symbol_converter} from "../../../components/currency_and_symbol
 import {NEW_PHYSICAL_GOOD_MUTATION} from "../../../graphql/core/newProduct/addNewPhysicalProduct_MUTATION";
 import {Helmet} from "react-helmet";
 import AcceptsCookies from "../../../components/cookieConsent";
-import CustomerChat from "../../../components/customerChat";
 
 const {TabPane} = Tabs;
 const antIcon = <Icon type="loading" style={{fontSize: 24}} spin/>;
@@ -483,7 +482,6 @@ export default class Order extends React.Component {
                             </div>
                         </div>
                         <AcceptsCookies/>
-                        <CustomerChat/>
                         <BusinessFooter/>
                     </div>
                 </div>
