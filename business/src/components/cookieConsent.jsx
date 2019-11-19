@@ -17,7 +17,7 @@ export default React.memo(() => {
                     buttonStyle={{color: "#4e503b", fontSize: "13px"}}
                     expires={150}
                 >
-                    By using RocketNow’s services you agree to our <a href={"http://rocketnow.eu/privacy"}>Cookies Policy</a>
+                    By using RocketNow’s services you agree to our <a aria-label={"RocketNows privacy policy"} href={"http://rocketnow.eu/privacy"}>Cookies Policy</a>
                 </CookieConsent>
             </React.Fragment>
         );

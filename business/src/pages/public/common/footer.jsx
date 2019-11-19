@@ -1,5 +1,6 @@
 import React from 'react';
 import {Helmet} from "react-helmet";
+
 const color = {color: "#ffffff"};
 
 export default React.memo(() => {
@@ -21,7 +22,8 @@ export default React.memo(() => {
                             <div className="col-sm-6 col-md-3 item">
                                 <h3 style={color}>About</h3>
                                 <ul>
-                                    <li><a aria-label={"Read the story of RocketNow"} href="http://rocketnow.eu/about">About</a></li>
+                                    <li><a aria-label={"Read the story of RocketNow"}
+                                           href="http://rocketnow.eu/about">About</a></li>
                                     <li><a aria-label={"See the careers that are currently available"}
                                            href="http://rocketnow.eu/careers">Careers</a></li>
                                     <li><a aria-label={"Please contact us for any inquiries"}
@@ -35,16 +37,22 @@ export default React.memo(() => {
                             <div className="col-sm-6 col-md-3 item">
                                 <h3 style={color}>Legal</h3>
                                 <ul>
-                                    <li><a aria-label={"Read the terms of service"} href="http://rocketnow.eu/tos">Terms of Service</a>
+                                    <li><a aria-label={"Read the terms of service"} href="http://rocketnow.eu/tos">Terms of
+                                        Service</a>
                                     </li>
-                                    <li><a aria-label={"Read the privacy policy"} href="http://rocketnow.eu/privacy">Privacy Policy</a>
+                                    <li><a aria-label={"Read the privacy policy"} href="http://rocketnow.eu/privacy">Privacy
+                                        Policy</a>
                                     </li>
                                 </ul>
                             </div>
                             <div className="col-sm-6 col-md-3 item">
                                 <h3 style={color}>RocketNow</h3>
                                 <ul>
-                                <li><a aria-label={"Read the terms of service"} href="http://rocketnow.eu">A new e-commerce platform</a></li>
+                                    <li>
+                                        <a aria-label={"Read the terms of service"} href="http://rocketnow.eu">
+                                            A new e-commerce platform
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="col item social">

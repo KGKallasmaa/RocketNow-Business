@@ -12,7 +12,9 @@ import Settings from "./pages/core/settings";
 
 import Signup from "./pages/public/signup";
 import Login from "./pages/public/login";
-import Affiliate from "./pages/public/affiliate";
+
+import Affiliate from "./pages/public/affiliate/affiliate";
+import JoinAffiliate from "./pages/public/affiliate/joinAffiliate";
 
 
 import PageNotFound from "./pages/pageNotFound.jsx";
@@ -53,8 +55,9 @@ export default function App() {
                 <PrivateBusinessRoute exact path="/settings" component={Settings}/>
                 <PrivateBusinessRoute exact path="/orders" component={Orders}/>
                 <PrivateBusinessRoute exact path="/warehouse" component={Warehouse}/>
-                <Route exact path="/" component={Home}/>
                 <Route exact path="/affiliate" component={Affiliate}/>
+                <Route exact path="/join/affiliate" component={JoinAffiliate}/>
+                <Route exact path="/" component={Home}/>
                 <Route path="*" component={PageNotFound}/>
             </Switch>
         </Router>
