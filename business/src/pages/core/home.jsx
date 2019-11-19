@@ -13,7 +13,6 @@ import BusinessNavbar from "./common/navbar";
 import BusinessFooter from "./common/footer";
 import {Helmet} from "react-helmet";
 import AcceptsCookies from "../../components/cookieConsent";
-import CustomerChat from "../../components/customerChat";
 
 
 export default class Home extends React.Component {
@@ -150,12 +149,8 @@ export default class Home extends React.Component {
                           content="View the performance of your RocketNow store"/>
                     <meta name="description" content="View the performance of your RocketNow store"/>
                 </Helmet>
-
-                <link rel="preconnect" href="https://use.fontawesome.com"/>
                 <link rel="stylesheet"
                       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
-
                 <div id="businessWrapper">
                     <Menu/>
                     <div className="d-flex flex-column" id="content-wrapper">
@@ -511,7 +506,6 @@ export default class Home extends React.Component {
                             </div>
                         </div>
                         <AcceptsCookies/>
-                        <CustomerChat/>
                         <BusinessFooter/>
                     </div>
                 </div>

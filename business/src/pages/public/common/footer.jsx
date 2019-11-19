@@ -1,10 +1,13 @@
 import React from 'react';
-
+import {Helmet} from "react-helmet";
 const color = {color: "#ffffff"};
 
 export default React.memo(() => {
         return (
             <div className="footer-dark">
+                <Helmet>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+                </Helmet>
                 <footer>
                     <div className="container">
                         <div className="row">
@@ -45,12 +48,15 @@ export default React.memo(() => {
                                 </ul>
                             </div>
                             <div className="col item social">
-                                <a title={"View RocketNow on Facebook"} href="#"><i
-                                    className="icon ion-social-facebook"/></a>
-                                <a title={"View RocketNow on Instagram"} href="#"><i
-                                    className="icon ion-social-instagram"/></a>
-                                <a title={"View RocketNow on LinedIn"} href="#"><i
-                                    className="icon ion-social-linkedin"/></a>
+                                <a title={"View RocketNow on Facebook"} href="#">
+                                    <i className="fab fa-facebook"/>
+                                </a>
+                                <a title={"View RocketNow on Instagram"} href="#">
+                                    <i className="fab fa-instagram"/>
+                                </a>
+                                <a title={"View RocketNow on LinedIn"} href="#">
+                                    <i className="fab fa-linkedin"/>
+                                </a>
                             </div>
                         </div>
                         <p className="copyright">Made with&nbsp;❤️ &nbsp;in Estonia 🇪🇪</p>

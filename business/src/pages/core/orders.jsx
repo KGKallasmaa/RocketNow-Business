@@ -16,7 +16,6 @@ import {Helmet} from "react-helmet";
 import {UPDATE_PARTIAL_ORDER_STATUS} from "../../graphql/core/order/updatePartialOrderStatus_MUTATION";
 import {getEmoji} from "../../components/emoji";
 import AcceptsCookies from "../../components/cookieConsent";
-import CustomerChat from "../../components/customerChat";
 
 const {Option} = Select;
 let GLOBAL_enumerator = 0;
@@ -540,7 +539,6 @@ export default class Order extends React.Component {
                             </div>
                         </div>
                         <AcceptsCookies/>
-                        <CustomerChat/>
                         <BusinessFooter/>
                     </div>
                 </div>
