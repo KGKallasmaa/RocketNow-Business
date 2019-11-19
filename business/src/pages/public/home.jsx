@@ -39,6 +39,11 @@ const perMonth = {color: "rgb(134,142,150)", fontSize: "16px"};
 const pricingButton = {backgroundColor: "#1e96ff", color: "#ffffff"};
 
 
+const whiteBackground = {backgroundColor: "rgb(255,255,255)"};
+const readyToTakeActionButtonColors = {color: "rgb(49,52,55)"};
+const joinTheProgramButton = {backgroundColor: "#1e96ff", paddingRight: "10%", paddingLeft: "10%"};
+
+
 export default class Home extends React.PureComponent {
     render() {
         const userIsLoggedIn = isBusinessUserLoggedIn();
@@ -394,25 +399,26 @@ export default class Home extends React.PureComponent {
                         </div>
                     </div>
                 </div>
-                <div className="newsletter-subscribe" style={{backgroundColor: "rgb(255,255,255)"}}>
+                <div className="highlight-blue" style={whiteBackground}>
                     <div className="container">
                         <div className="intro">
-                            <h2 className="text-center">Join Our Affiliate Program</h2>
-                            <p className="text-center">Transform your passion to a fulltime job</p>
-                            <div className="row">
-                                <div className="col-md-4 col-xl-12"><a
-                                    className="btn btn-outline-primary btn-block text-capitalize text-white border rounded-0"
-                                    role="button" style={pricingButton} href="/affiliate"
-                                    aria-label={"Learn more about the RocketNow affiliate network"}>Learn
-                                    more</a></div>
-                            </div>
+                            <h2 className="text-center" style={readyToTakeActionButtonColors}>RocketNow affiliate
+                                program</h2>
+                            <p className="text-center" style={readyToTakeActionButtonColors}>This program allows you do
+                                turn your passion or hobby to income</p>
+                        </div>
+                        <div className="buttons">
+                            <a className="btn btn-primary btn-block btn-sm" role="button"
+                               aria-label={"Learn more about the RocketNows affiliate program"}
+                               href="/affiliate"
+                               style={joinTheProgramButton}>
+                                Learn More
+                            </a>
                         </div>
                     </div>
                 </div>
                 <Footer/>
                 <AcceptsCookies/>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"/>
-                <script  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" />
             </React.Fragment>
         );
     }

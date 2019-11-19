@@ -92,16 +92,13 @@ it('Core functionality navbar component renders correctly', () => {
 
 
 //Other
-
 import Home from './pages/public/home';
 import Login from './pages/public/login';
 import Signup from './pages/public/signup';
 import PageNotFound from './pages/pageNotFound';
-import Affiliate from "./pages/public/affiliate";
+import Affiliate from "./pages/public/affiliate/affiliate";
 
-//todo: affiliate page
 
-//Todo: update this page if you update the homepage
 it('Homepage renders correctly', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Home />, div);
