@@ -42,6 +42,7 @@ const pricingButton = {backgroundColor: "#1e96ff", color: "#ffffff"};
 const whiteBackground = {backgroundColor: "rgb(255,255,255)"};
 const readyToTakeActionButtonColors = {color: "rgb(49,52,55)"};
 const joinTheProgramButton = {backgroundColor: "#1e96ff", paddingRight: "10%", paddingLeft: "10%"};
+const fontSize = {fontSize: "20px"};
 
 
 export default class Home extends React.PureComponent {
@@ -71,6 +72,7 @@ export default class Home extends React.PureComponent {
                           content="It's easy to sell online with RocketNow. Put your products in front of RocketNow customers and increase your visibility."/>
                     <meta name="twitter:image" content={ogLogo}/>
                     <meta property="og:image" content={ogLogo}/>
+                    <meta property="og:url" content="http://business.rocketnow.eu"/>
                 </Helmet>
                 <Navbar/>
                 <header className="masthead text-center text-white">
@@ -89,7 +91,6 @@ export default class Home extends React.PureComponent {
                     <div className="bg-circle-3 bg-circle"/>
                     <div className="bg-circle-4 bg-circle"/>
                 </header>
-
                 <section>
                     <div className="container">
                         <div className="row align-items-center">
@@ -104,8 +105,10 @@ export default class Home extends React.PureComponent {
                             <div className="col-lg-6 order-lg-1">
                                 <div className="p-5">
                                     <h2 className="display-4">For those who have awesome products</h2>
-                                    <p>Whether you sell vintage books or tickets to a concert, you're welcome to join
-                                        our platform.<br/>We help your business to grow by putting your product in front
+                                    <p style={fontSize}>Whether you sell vintage books or tickets to a concert, you're
+                                        welcome to join
+                                        our platform.</p>
+                                    <p style={fontSize}> We help your business to grow by putting your product in front
                                         of numerous RocketNow customers as well as providing you with analytics
                                         about your consumer base.&nbsp;</p>
                                 </div>
@@ -217,8 +220,10 @@ export default class Home extends React.PureComponent {
                             <div className="col-lg-6 order-lg-2">
                                 <div className="p-5">
                                     <h2 className="display-4">Choose your path</h2>
-                                    <p>Whether you're are a small business or an established company we have a plan for
-                                        you.<br/>Different plans can help you accomplish different goals:<br/>a) testing
+                                    <p style={fontSize}>Whether you're are a small business or an established company we
+                                        have a plan for
+                                        you.</p>
+                                    <p style={fontSize}>DSome of the goals you can accomplish are:<br/><br/>a) testing
                                         your product-market fit<br/>b) expanding to a new market<br/>c) increasing
                                         digital sales</p>
                                 </div>
@@ -327,9 +332,11 @@ export default class Home extends React.PureComponent {
                             <div className="col-lg-6 order-lg-1">
                                 <div className="p-5">
                                     <h2 className="display-4">Supporting you</h2>
-                                    <p>We're helping you to get the most out of your RocketNows store.<br/>We're there
-                                        for you If you need help with setting up your account or you want sales-boosting
-                                        tips.<br/>We're also taking care of most communication with your retail
+                                    <p style={fontSize}>We're helping you to get the most out of your RocketNows store.</p>
+                                    <p style={fontSize}>We're there for you If you need help with setting up your account or you want
+                                        sales-boosting
+                                        tips.</p>
+                                    <p style={fontSize}>We're also taking care of most communication with your retail
                                         clients so that you can focus on what's truly important.</p>
                                 </div>
                             </div>

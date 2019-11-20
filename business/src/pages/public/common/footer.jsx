@@ -17,6 +17,7 @@ export default React.memo(() => {
                                 <ul>
                                     <li><a aria-label={"Sell your goods on RocketNow"} href="/">Sell on
                                         RocketNow</a></li>
+                                    <li><a aria-label={"Learn more about the affiliate program"} href="/affiliate">Affiliate program</a></li>
                                 </ul>
                             </div>
                             <div className="col-sm-6 col-md-3 item">
@@ -28,10 +29,6 @@ export default React.memo(() => {
                                            href="http://rocketnow.eu/careers">Careers</a></li>
                                     <li><a aria-label={"Please contact us for any inquiries"}
                                            href="http://rocketnow.eu/contact">Contact</a></li>
-                                    <li><a aria-label={"Read some tips and tips about shopping online"}
-                                           href="http://rocketnow.eu/blog">Blog</a></li>
-                                    <li><a aria-label={"See the answers to the most frequently asked questions"}
-                                           href="http://rocketnow.eu/faq">FAQ</a></li>
                                 </ul>
                             </div>
                             <div className="col-sm-6 col-md-3 item">
@@ -55,6 +52,7 @@ export default React.memo(() => {
                                     </li>
                                 </ul>
                             </div>
+                            <br/><br/><br/><br/><br/>
                             <div className="col item social">
                                 <a title={"View RocketNow on Facebook"} href="#">
                                     <i className="fab fa-facebook"/>

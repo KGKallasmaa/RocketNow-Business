@@ -133,6 +133,7 @@ class NormalLoginForm extends React.Component {
                 <Helmet>
                     <title>Login</title>
                     <meta property="og:title" content="Login"/>
+                    <meta property="og:url" content="http://business.rocketnow.eu"/>
                     <link rel="canonial" href={process.env.REACT_APP_PUBLIC_URL + "/login"}/>
                     <meta property="og:description"
                           content="Loging in to RocketNow unlocks a whole new world"/>
